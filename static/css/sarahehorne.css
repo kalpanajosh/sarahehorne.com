@@ -1,0 +1,112 @@
+body{
+    background-color:#000;
+    color: #FFF;
+    font-family:Times, serif;
+    font-size: 12;
+    margin: 0px;
+}
+
+#container {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+}
+#container[id] {
+    display: table; 
+    position: static;
+}
+
+#content_wrapper {
+    position: absolute; 
+    top: 50%;
+    width: 100%;
+} /* for explorer only*/
+#content_wrapper[id] {
+    display: table-cell; 
+    vertical-align: middle; 
+    position: static;
+}
+#content {
+    position: relative; 
+    top: -50%; 
+    width: 100%;
+    height:600px;
+    background-color: #000;/*#F6F2FF;*/ /*#CBE1FF;*/
+    
+} /* for explorer only */
+/* optional: #inner[id] {position: static;} */
+
+
+#title{
+    margin: auto;
+    text-align: center;
+    font-size: 26;
+    font-weight: bold;
+}
+
+#sub_title{
+    margin: auto;
+    text-align: center;
+    font-size: 16;
+/*font-weight: bold;*/
+}
+
+#carousel_wrapper{
+    overflow:hidden;
+    width:100%;
+    height:500px;
+    margin:auto;
+    position:relative;
+    display:none;
+}
+#carousel_wrapper_inner{
+    overflow:hidden;
+    width:100%;
+    display:table;
+}
+
+#carousel{
+    position:absolute;
+    left:0px;
+    display:table-row;
+
+}
+.carousel_item_wrapper{
+    display:table-cell;
+}
+.carousel_item{
+    width:221px;
+    height:500px;
+    display:block;
+    margin:0px 10px 0px 10px;
+}
+
+
+#bottom_bar{
+    position: absolute;
+    bottom:0px;
+    margin: auto;
+    padding: 0px 0px 5px 0px;
+    width: 100%;
+    text-align:center;
+}
+
+#bottom_bar p {
+    display: inline;
+}
+
+#bottom_bar ul, #bottom_bar li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+#bottom_bar ul li:after {
+    content: "| ";
+}
+
+#bottom_bar ul li.last:after {
+    content: "";
+}
