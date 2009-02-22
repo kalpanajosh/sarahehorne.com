@@ -40,6 +40,7 @@ body{
 
 #title{
     margin: auto;
+		margin-bottom: 40px;
     text-align: center;
     font-size: 26;
     font-weight: bold;
@@ -54,12 +55,36 @@ body{
 
 #carousel_wrapper{
     overflow:hidden;
-    width:100%;
+    width:80%;
     height:500px;
     margin:auto;
     position:relative;
     display:none;
 }
+.edge_gradient{
+	top:0px;
+  margin:0px;
+  position:absolute;
+	z-index:10;	
+  width:100px;
+  height:500px;	
+}
+* .edge_gradient img { /* use Star Selector Hack here to exclude IE 7 - with the Conditional Comment [if lte IE 6] it didn't work, WTF?! */
+ 	background-image: expression(
+         this.runtimeStyle.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="' + this.src + '", sizingMethod="image")',
+         this.runtimeStyle.backgroundImage = 'none',
+         this.src = 'static/images/transparent.gif'
+     );
+}
+
+#left_gradient{
+		left:0px;
+}
+
+#right_gradient{
+		right:0px;
+}
+
 #carousel_wrapper_inner{
     overflow:hidden;
     width:100%;
